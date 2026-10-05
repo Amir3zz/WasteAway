@@ -1,69 +1,220 @@
-import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div>
+      <section className="hero-section">
+        <div className="container hero-grid">
+          <div className="hero-copy">
+            <div className="eyebrow">
+              COMMUNITY FOOD RECOVERY
+            </div>
+
+            <h1>
+              Turn food waste into
+              <span className="highlight"> community value.</span>
+            </h1>
+
+            <p className="hero-description">
+              WasteAway connects unwanted food with people,
+              farms, and organizations that can put it to good
+              use — while rewarding the people who donate.
+            </p>
+
+            <div className="hero-actions">
+              <Link
+                href="/login"
+                className="button button-primary button-large"
+              >
+                Start Donating
+              </Link>
+
+              <a
+                href="#how-it-works"
+                className="button button-secondary button-large"
+              >
+                How It Works
+              </a>
+            </div>
+
+            <div className="hero-trust">
+              <span>✓ Community-focused</span>
+              <span>✓ Reward-based</span>
+              <span>✓ Less waste</span>
+            </div>
+          </div>
+
+          <div className="hero-visual">
+            <div className="hero-card-main">
+              <div className="hero-card-icon">🥕</div>
+
+              <div>
+                <p className="hero-card-label">
+                  THIS WEEK
+                </p>
+                <h3>Food saved from waste</h3>
+                <div className="impact-number">
+                  1,284 kg
+                </div>
+              </div>
+            </div>
+
+            <div className="floating-card floating-card-top">
+              <span>+30 pts</span>
+              <small>Donation verified</small>
+            </div>
+
+            <div className="floating-card floating-card-bottom">
+              <span>🌱</span>
+              <small>Making every donation count</small>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section
+        id="how-it-works"
+        className="section section-light"
+      >
+        <div className="container">
+          <div className="section-heading">
+            <div className="eyebrow">HOW IT WORKS</div>
+            <h2>Three steps. One better outcome.</h2>
+            <p>
+              WasteAway keeps the process simple for the
+              community.
+            </p>
+          </div>
+
+          <div className="steps-grid">
+            <div className="step-card">
+              <div className="step-number">01</div>
+              <div className="step-icon">🥬</div>
+              <h3>Donate</h3>
+              <p>
+                Tell us what food you have and roughly how much
+                you want to donate.
+              </p>
+            </div>
+
+            <div className="step-arrow">→</div>
+
+            <div className="step-card">
+              <div className="step-number">02</div>
+              <div className="step-icon">🚚</div>
+              <h3>Route</h3>
+              <p>
+                WasteAway directs it to the appropriate
+                community, farm, or composting partner.
+              </p>
+            </div>
+
+            <div className="step-arrow">→</div>
+
+            <div className="step-card">
+              <div className="step-number">03</div>
+              <div className="step-icon">🎁</div>
+              <h3>Reward</h3>
+              <p>
+                Once your donation is verified, you receive
+                points that can be redeemed for partner offers.
+              </p>
+            </div>
+          </div>
         </div>
-      </main>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-heading">
+            <div className="eyebrow">WHY WASTEAWAY</div>
+            <h2>Waste can still have value.</h2>
+            <p>
+              The same donation can help people, support farms,
+              and reduce unnecessary waste.
+            </p>
+          </div>
+
+          <div className="feature-grid">
+            <div className="feature-card">
+              <div className="feature-icon">🍎</div>
+              <h3>Edible surplus</h3>
+              <p>
+                Food that is still suitable for consumption can
+                be routed toward people who need it.
+              </p>
+            </div>
+
+            <div className="feature-card">
+              <div className="feature-icon">🌱</div>
+              <h3>Organic compost</h3>
+              <p>
+                Non-edible organic material can be redirected
+                toward farms and composting partners.
+              </p>
+            </div>
+
+            <div className="feature-card">
+              <div className="feature-icon">⭐</div>
+              <h3>Real rewards</h3>
+              <p>
+                Your contributions build points that can unlock
+                discounts and offers from local partners.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="stats-section">
+        <div className="container stats-grid">
+          <div>
+            <strong>12,450 kg</strong>
+            <span>Waste diverted</span>
+          </div>
+
+          <div>
+            <strong>3,200+</strong>
+            <span>Community donations</span>
+          </div>
+
+          <div>
+            <strong>850+</strong>
+            <span>Rewards redeemed</span>
+          </div>
+
+          <div>
+            <strong>20+</strong>
+            <span>Local partners</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="cta-section">
+        <div className="container cta-inner">
+          <div>
+            <div className="eyebrow eyebrow-light">
+              READY TO MAKE A DIFFERENCE?
+            </div>
+
+            <h2>
+              Your leftovers can still do something good.
+            </h2>
+
+            <p>
+              Join WasteAway and turn each donation into
+              community impact.
+            </p>
+          </div>
+
+          <Link
+            href="/login"
+            className="button button-white button-large"
+          >
+            Get Started
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
