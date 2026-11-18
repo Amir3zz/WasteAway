@@ -96,24 +96,25 @@ export default async function DashboardPage() {
                     </div>
                 </div>
 
+                <div className="dashboard-donation-cta">
+                    <Link href="/donate" className="dashboard-donation-button">
+                        <span className="dashboard-donation-plus" aria-hidden="true">
+                            +
+                        </span>
+
+                        <span className="dashboard-donation-copy">
+                            <strong>Add a new donation</strong>
+                            <small>Give surplus food a second life.</small>
+                        </span>
+
+                        <span className="dashboard-donation-arrow" aria-hidden="true">
+                            →
+                        </span>
+                    </Link>
+                </div>
+                
                 <div className="dashboard-main-grid">
                     <section className="content-card recent-card">
-                        <div className="card-heading">
-                            <div>
-                                <div className="eyebrow">
-                                    ACTIVITY
-                                </div>
-                                <h2>Recent donations</h2>
-                            </div>
-
-                            <Link
-                                href="/donate"
-                                className="button button-primary"
-                            >
-                                + New Donation
-                            </Link>
-                        </div>
-
                         {donations.length === 0 ? (
                             <div className="empty-state">
                                 <div className="empty-icon">🥕</div>
